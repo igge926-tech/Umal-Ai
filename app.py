@@ -11,6 +11,11 @@ client = genai.Client(api_key=API_KEY)
 # 3. NIDAMKA LOGIN-KA (Si fudud)
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
+    # 2. API Key-ga laga soo qaatay Streamlit Secrets
+import os
+
+# Streamlit wuxuu si toos ah u aqoonsanayaa API key-ga haddii laga helo Secrets
+client = genai.Client()
 
 if not st.session_state.logged_in:
     st.title("Gali Akoonkaaga - Family Umal 🔐")
